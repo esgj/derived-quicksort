@@ -6,7 +6,7 @@ import java.util.Arrays;
  * This is just a silly implementation of a quicksort-like algorithm.
  * It is likely to be somewhat inaccurate because it was developed within few hours.
  *
- * Complexity is calculated to be about O(n lg n) at best. Let us hope.
+ * Complexity is calculated to be about O(n lg n) at best.
  *
  * @author Espen Gjendem
  */

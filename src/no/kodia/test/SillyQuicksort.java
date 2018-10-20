@@ -14,7 +14,9 @@ public class SillyQuicksort {
 
     public static void main(String[] args) {
         SillyQuicksort obj = new SillyQuicksort();
-        int[] a = new int[]{872, 23, 1, 5, 4, 8, 2, 3, 44, 55, 66, 92, 12, 334};
+        int[] a = new int[]{2, 1, 5, 4, 8, 2, 8, 3, 44, 98, 56, 4, 7, 7, 8, 2, 1, 9};
+        System.out.println(Arrays.toString(a));
+        obj.partition(a, 0, a.length-1);
         System.out.println(Arrays.toString(a));
         obj.sort(a, 0, a.length-1);
         System.out.println(Arrays.toString(a));
@@ -35,16 +37,19 @@ public class SillyQuicksort {
         int j = e;
 
         while (i < j) {
-            if (arr[i] > arr[j]) {
-                swap(arr, i, j);
+            while (arr[j] < arr[p]) {
+                swap(arr, j, p);
+                j--;
+            }
+
+            while (arr[i] > arr[p]) {
+                swap(arr, i, p);
+                i++;
             }
 
             j--;
             i++;
         }
-
-        if (arr[p] < arr[s]) swap(arr, s, p);
-        if (arr[p] > arr[e]) swap(arr, e, p);
 
         if (p > 0 && p < arr.length - 1) {
             if (arr[p] < arr[p - 1]) swap(arr, p - 1, p);

@@ -14,10 +14,8 @@ public class SillyQuicksort {
 
     public static void main(String[] args) {
         SillyQuicksort obj = new SillyQuicksort();
-        int[] a = new int[]{2, 1, 5, 4, 8, 2, 8, 3, 44, 98, 56, 4, 7, 7, 8, 2, 1, 9};
-        System.out.println(Arrays.toString(a));
-        obj.partition(a, 0, a.length-1);
-        System.out.println(Arrays.toString(a));
+        int[] a = new int[]{2, 1, 5, 4, 8, 2, 2, 9, 6, 2, 0, 3, 8, 1};
+
         obj.sort(a, 0, a.length-1);
         System.out.println(Arrays.toString(a));
     }

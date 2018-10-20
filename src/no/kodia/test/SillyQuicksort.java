@@ -37,18 +37,8 @@ public class SillyQuicksort {
         int j = e;
 
         while (i < j) {
-            while (arr[j] < arr[p]) {
-                swap(arr, j, p);
-                j--;
-            }
-
-            while (arr[i] > arr[p]) {
-                swap(arr, i, p);
-                i++;
-            }
-
-            j--;
-            i++;
+            while (arr[j--] < arr[p]) swap(arr, j+1, p);
+            while (arr[i++] > arr[p]) swap(arr, i-1, p);
         }
 
         if (p > 0 && p < arr.length - 1) {
